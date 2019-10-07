@@ -1,5 +1,5 @@
 import React from 'react'
-import { Card, CardContent, CardActions, Divider } from '@material-ui/core'
+import { Card, CardContent, CardActions, Divider, Link } from '@material-ui/core'
 import cars from '../cars.json'
 
 const Home = () => {
@@ -19,8 +19,8 @@ const Home = () => {
                     </CardContent>
                     <Divider />
                     <CardActions style={{ color: 'mediumblue' }}>
-                        {/* Change a tag to Link */}
-                        <a>See more Details</a>
+                    <Link to={`${car.id}`}></Link>
+                        <a>See More Details</a>
                     </CardActions>
                 </Card>
             ))}
@@ -28,4 +28,4 @@ const Home = () => {
     )
 }
 
-export default Home
+export default Home;
